@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {ProductConsumer} from '../context';
 import {Link} from 'react-router-dom';
 import {ButtonContainer} from './Button';
-import styled from 'styled-components';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Suggest from './SuggestProducts';
@@ -20,7 +19,6 @@ export default class Details extends Component {
             const {
                 id,
                 rating,
-                img,
                 img2,
                 img3,
                 info,
@@ -34,9 +32,9 @@ export default class Details extends Component {
                     {/* title */}
                     <div className="row">
                         <div className = "col-10 mx-auto text-center text-blue my-1">
-                        <img src= "img/sapling-2.png" width="40px" height="40px" align="center"></img>
+                        <img src= "img/sapling-2.png" width="40px" height="40px" align="center" alt="images"></img>
                             <h2>The Quarantine Collection</h2>
-                        <img src= "img/line.png" width="500px" height="3px" align="center"></img>
+                        <img src= "img/line.png" width="500px" height="3px" align="center" alt="images"></img>
                         </div>
                     </div>
                     <div className="row">

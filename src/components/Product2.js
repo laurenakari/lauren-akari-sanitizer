@@ -9,11 +9,7 @@ export default class Product2 extends Component {
     render(){
         const{
             id, 
-            title, 
-            img, 
             img3,
-            price, 
-            inCart
         } = this.props.product;
         return(
             <ProductWrapper className="col-11 col-md-6 col-lg-3

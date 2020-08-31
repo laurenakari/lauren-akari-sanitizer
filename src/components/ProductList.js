@@ -17,16 +17,16 @@ export default class ProductList extends Component {
                          </h5>
                          <br />
                         <div className="container col-7 row-5">
-                            <img src="img/hand-sanitizer.gif" className="shadow-lg" width="600px"/>
+                            <img src="img/hand-sanitizer.gif" className="shadow-lg" width="600px" alt="images"/>
                         </div>
                         <br />
                         <br />
                         <div className="col-10 mx-auto text-center text-blue my-1">
-                            <img src= "img/sapling-2.png" width="20px" height="20px"></img>
+                            <img src= "img/sapling-2.png" width="20px" height="20px" alt="images"></img>
                             <h5 className="font-weight-bold text-blue text-center mx-5">
                                 Hand Sanitizers 
                             </h5>
-                            <img src= "img/line.png" width="400px" height="3px" align="center"></img>
+                            <img src= "img/line.png" width="400px" height="3px" align="center" alt="images"></img>
                          </div>
                         <br />
                         <div className="row">
