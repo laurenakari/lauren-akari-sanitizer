@@ -1,15 +1,15 @@
 :root{
-  --mainBlue:#ac887b;
-  --lightBlue:#ffffff;
-  --mainWhite:#eed2c3;
+  --mainBrown:#ac887b;
+  --mainEggshell:#ffffff;
+  --mainPeach:#ddbfaf;
   --mainDark:#232528;
-  --mainPink: #e9cabe;
-  --mainYellow:#8f6458;
-  --mainBeige: #f7f2eb;
+  --mainWhite: #ffffff;
+  --mainDarkBrown:#8f6458; 
+  --mainTan: #f7f2eb; 
 }
 body{
   font-family: 'Playfair Display', sans-serif !important;
-  background: var(--mainWhite) !important;
+  background: var(--mainTan) !important;
   color: var(--mainDark) !important;
 }
 .text{
@@ -19,11 +19,11 @@ body{
 }
 
 .text-blue{
-  color: var(--mainYellow)
+  color: var(--mainDarkBrown)
 }
 
 .text-bright{
-  color: var(--lightBlue)
+  color: var(--mainEggshell)
 }
 .btn-black{
   background:transparent;
@@ -36,10 +36,10 @@ body{
 
 .btn-black:hover{
   background: var(--mainDark) !important;
-  color: var(--mainWhite) !important; 
+  color: var(--mainPeach) !important; 
 }
 .cart-icon{
   cursor: pointer;
   font-size: 1.2rem;
-  color:var(--mainYellow);
+  color:var(--mainDarkBrown);
 }

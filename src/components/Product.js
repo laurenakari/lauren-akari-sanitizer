@@ -38,7 +38,7 @@ export default class Product extends Component {
                 disabled={inCart ? true:false} 
                 onClick={() => {
                     value.addToCart(id);
-                    value.openModel(id);
+                    value.openModal(id);
                 }}
                 >
                     {inCart?(
@@ -46,7 +46,7 @@ export default class Product extends Component {
                 disabled={inCart ? true:false} 
                 onClick={() => {
                     value.removeItem(id);
-                    value.openModel2(id);
+                    value.openModal2(id);
                 }}
                 >
                     {" "}
@@ -85,7 +85,7 @@ export default class Product extends Component {
                 disabled={inCart ? true:false} 
                 onClick={() => {
                     value.addToCart(id);
-                    value.openModel(id);
+                    value.openModal(id);
                 }}
                 >
                     {inCart?(
@@ -124,7 +124,7 @@ const ProductWrapper = styled.div`
     border-color:transparent;
     transition:all 1s linear;
     font-family: Raleway; 
-    background-color: var(--mainBeige);
+    background-color: var(--mainEggshell);
 }
 .card-footer{
     background:transparent;
@@ -155,9 +155,9 @@ const ProductWrapper = styled.div`
     bottom: 0;
     right: 0;
     padding:0.2rem 0.4rem;
-    background: var(--mainWhite);
+    background: var(--mainPeach);
     border:none;
-    color:var(--lightBlue);
+    color:var(--mainEggshell);
     font-size:1.4rem;
     border-radius:0.5rem 0 0 0;
     transform:translate(100%, 100%);
@@ -167,20 +167,20 @@ const ProductWrapper = styled.div`
     transform:translate(0,0); 
 }
 .cart-btn:hover{
-    color:var(--mainBlue);
+    color:var(--mainBrown);
     cursor: pointer;
 }
 .cart-btn-2{
     position: center;
-    padding:0.4rem 0.4rem 0.4rem;
+    padding:0.4rem 1rem 0.4rem;
     border:none;
     border-radius:0.2rem 0.2rem 0.2rem 0.2rem;
-    background: var(--mainYellow);
-    color:var(--mainBeige);
+    background: var(--mainWhite);
+    color:var(--mainDarkBrown);
     
 }
 .cart-btn-2:hover{
-    color:var(--mainPink);
+    color:var(--mainPeach);
     cursor: pointer;
     transition: all 0.2s linear;
     box-shadow:2px 2px 5px 0px rgba(0,0,0,0.2);

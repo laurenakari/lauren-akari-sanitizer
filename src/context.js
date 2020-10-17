@@ -11,9 +11,9 @@ class ProductProvider extends Component {
         products: [],
         detailProduct:detailProduct,
         cart: [],
-        modelOpen: false,
-        modelOpen2: false, 
-        modelProduct:detailProduct, 
+        modalOpen: false,
+        modalOpen2: false, 
+        modalProduct:detailProduct, 
         cartSubTotal: 0, 
         cartTax: 0, 
         cartTotal: 0
@@ -62,21 +62,21 @@ class ProductProvider extends Component {
         this.addTotals();
     });
         };
-openModel = id =>{
+openModal = id =>{
     const product = this.getItem(id);
     this.setState(()=>{
-        return {modelProduct: product, modelOpen:true}
+        return {modalProduct: product, modalOpen:true}
     });
 };
-openModel2 = id =>{
+openModal2 = id =>{
     const product = this.getItem(id);
     this.setState(()=>{
-        return {modelProduct: product, modelOpen2:true}
+        return {modalProduct: product, modalOpen2:true}
     });
 };
-closeModel = () =>{
+closeModal = () =>{
 this.setState(()=>{
-    return {modelOpen: false, modelOpen2: false};
+    return {modalOpen: false, modalOpen2: false};
 });
 };
 increment = (id) =>{
@@ -180,9 +180,9 @@ addTotals = () =>{
                 ...this.state, 
             handleDetail:this.handleDetail,
             addToCart: this.addToCart,
-            openModel: this.openModel,
-            openModel2: this.openModel2,
-            closeModel: this.closeModel,
+            openModal: this.openModal,
+            openModal2: this.openModal2,
+            closeModal: this.closeModal,
             increment: this.increment,
             decrement: this.decrement,
             removeItem: this.removeItem,

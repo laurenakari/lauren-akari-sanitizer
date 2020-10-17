@@ -6,8 +6,8 @@ import ProductList from './components/ProductList';
 import Details from './components/Details';
 import Cart from './components/Cart';
 import Default from './components/Default';
-import Model from './components/Model';
-import Model2 from './components/Model2';
+import Modal from './components/Modal';
+import Modal2 from './components/Modal2';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -21,8 +21,8 @@ function App() {
         <Route path="/cart" component={Cart} />
         <Route component={Default} />
       </Switch> 
-      <Model />
-      <Model2 />
+      <Modal />
+      <Modal2 />
     </React.Fragment>
   );
 }

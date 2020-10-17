@@ -5,45 +5,40 @@ import {ButtonContainer} from "./Button";
 import {Link} from "react-router-dom";
 
 
-export default class Model extends Component {
+export default class Modal2 extends Component {
     render() {
         return (
             <ProductConsumer>
                 {(value) =>{
-                    const {modelOpen, closeModel} = value;
-                    const {img4, title, price} = value.modelProduct;
+                    const {modalOpen2, closeModal} = value;
+                    const {img4, title, price} = value.modalProduct;
 
-                    if(!modelOpen){
+                    if(!modalOpen2){
                         return null;
                     }
                     else{
                         return(
-                        <ModelContainer>
+                        <ModalContainer>
                             <div className="container">
                                 <div className="row">
-                                    <div id="model" className ="col-8 mx-auto col-md-6 col-lg-4 
+                                    <div id="modal" className ="col-8 mx-auto col-md-6 col-lg-4 
                                     text-center text-capitalize p-5">
-                                        <h5>item added to the cart!</h5>
+                                        <h5>item removed from cart</h5>
                                         <br />
-                                        <img src={img4} className="img-fluid shadow-sm" alt="product"/>
+                                        <img src={img4} className="img-fluid shadow-sm" alt="product" />
                                         <br />
                                         <br />
-                                        <h5 className = "text-blue">{title}</h5>
+                                        <h5 className="text-blue">{title}</h5>
                                         <h5 className = "text-muted">price : $ {price}.00 </h5>
                                         <Link to='/'>
-                                            <ButtonContainer onClick={()=>closeModel()}>
-                                            Store
-                                            </ButtonContainer>
-                                        </Link>
-                                        <Link to='/cart'>
-                                            <ButtonContainer cart onClick={()=>closeModel()}>
-                                            View Cart
+                                            <ButtonContainer onClick={()=>closeModal()}>
+                                            Back To Store
                                             </ButtonContainer>
                                         </Link>
                                     </div>
                                 </div>
                             </div>
-                        </ModelContainer>
+                        </ModalContainer>
                         );
                     }
                 }}
@@ -52,7 +47,7 @@ export default class Model extends Component {
     }
 }
 
-const ModelContainer = styled.div`
+const ModalContainer = styled.div`
 position: fixed;
 top: 0;
 left: 0;
@@ -63,7 +58,7 @@ display:flex;
 align-items: center;
 font-family: 'Playfair Display', sans-serif;
 justify-content: center;
-#model {
-    background:var(--mainWhite);
+#modal {
+    background:var(--mainPeach);
     }
 `;
