@@ -1,24 +1,27 @@
 :root{
   --mainBrown:#ac887b;
-  --mainEggshell:#ffffff;
+  --mainEggshell:#fafafa;
   --mainPeach:#ddbfaf;
   --mainDark:#232528;
   --mainWhite: #ffffff;
+  --mainGrey: #f3f3f3;
   --mainDarkBrown:#8f6458; 
   --mainTan: #f7f2eb; 
+  --darkGrey: #494949;
+  --regularGrey: #cecece;
 }
 body{
-  font-family: 'Playfair Display', sans-serif !important;
-  background: var(--mainTan) !important;
+  font-family: 'Lora', serif;
+  background: var(--mainEggshell) !important;
   color: var(--mainDark) !important;
 }
 .text{
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'Lora', serif;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
 }
 
-.text-blue{
+.text-dark{
   color: var(--mainDarkBrown)
 }
 
@@ -28,7 +31,7 @@ body{
 .btn-black{
   background:transparent;
   text-transform: capitalize;
-  font-size: 0.8rem !important;
+  font-size: 0.3rem !important;
   color:var(--mainDark);
   border-radius: 0 !important;
   border:0.1rem solid var(--mainDark) !important;

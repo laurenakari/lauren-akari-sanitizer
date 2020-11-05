@@ -28,7 +28,7 @@ export default class Modal extends Component {
                                         <img src={img4} className="img-fluid shadow-sm" alt="product"/>
                                         <br />
                                         <br />
-                                        <h5 className = "text-blue">{title}</h5>
+                                        <h5 className = "text-dark">{title}</h5>
                                         <h5 className = "text-muted">price : $ {price}.00 </h5>
                                         <Link to='/'>
                                             <ButtonContainer onClick={()=>closeModal()}>
@@ -64,6 +64,6 @@ align-items: center;
 font-family: 'Playfair Display', sans-serif;
 justify-content: center;
 #modal {
-    background:var(--mainPeach);
+    background:var(--mainWhite);
     }
 `;

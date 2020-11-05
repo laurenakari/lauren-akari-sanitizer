@@ -15,7 +15,7 @@ export default class Details extends Component {
     render() {
         return (
             <ProductConsumer>
-            {value => {
+            {item => {
             const {
                 id,
                 rating,
@@ -24,18 +24,14 @@ export default class Details extends Component {
                 info,
                 price,
                 title,
-                inCart
-            } = value.detailProduct;
+                inCart,
+                count,
+            } = item.detailProduct;
 
             return(
                 <div className="container py-5">
                     {/* title */}
                     <div className="row">
-                        <div className = "col-10 mx-auto text-center text-blue my-1">
-                        <img src= "img/sapling-2.png" width="40px" height="40px" align="center" alt="images"></img>
-                            <h2>The Quarantine Collection</h2>
-                        <img src= "img/line.png" width="500px" height="3px" align="center" alt="images"></img>
-                        </div>
                     </div>
                     <div className="row">
                     <div className="col-10 mx-auto col-md-6 my-3" style={styles}>
@@ -61,33 +57,39 @@ export default class Details extends Component {
                             <span className="text-uppercase">
                                 {rating}</span>
                         </h4>
-                        <h4 className="text-blue">
+                        <h4 className="text-title
+                        text-muted mt-3 mb-2">
+                            <span>
+                                The Quarantine Collection</span>
+                        </h4>
+                        <h4 className="text-dark">
                             <strong>
-                                price: <span>$</span>
-                                {price}
+                                <span>$</span>
+                                {price}.00
                             </strong>
                         </h4>
-                        <p className="font-weight-bold mt-3 mb-0">
-                            some info about product:
-                        </p>
-                        <p className="text-muted">{info}</p>
+                        <br />
                         <Suggest />
-                        {/*buttons */}
+                        <br />
+                        <br />
                         <div>
-                            <Link to="/">
-                                <ButtonContainer>back to products </ButtonContainer>
-                            </Link>
                             <ButtonContainer
                                 cart
                                 disabled={inCart?true:false}
                                 onClick={()=>{
-                                    value.addToCart(id);
-                                    value.openModal(id);
+                                    item.addToCart(id);
+                                    item.openModal(id);
                                 }}
                                 >
-                                {inCart?"inCart": "add to cart"}
+                                {inCart?"in Cart": "add to bag"}
                             </ButtonContainer>
                         </div>
+                        <br />
+                        <br />
+                        <p className="font-weight-bold mt-3 mb-0">
+                            some info about product:
+                        </p>
+                        <p className="text-muted">{info}</p>
                     </div>
                 </div>
                 </div>
